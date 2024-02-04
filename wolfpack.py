@@ -13,3 +13,20 @@ ship_position = [[]]
 #Global variable for alphabet
 alphabet = ABCDEFGHIJKLMNOPQRSTUVWXYZ
 
+def grid_ship_placement(start-row, end-row, start-col, end-col):
+    #This will check the column or row to see if there can be a ship placed
+    global world_grid
+    global ship_position
+
+    checked = True
+    for r in range(start-row, end-row):
+        for c in range(start-col, end-col):
+            if world_grid[r][c] != ".":
+                checked = False
+                break
+    if checked:
+        ship_position.append(start-row, end-row, start-col, end-col)
+        for r in range(start-row, end-row):
+            for c in range(start-col, end-col)
+                world_grid[r][c] = "0"
+    return checked
