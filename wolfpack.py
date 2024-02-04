@@ -18,6 +18,14 @@ def grid_ship_placement(start-row, end-row, start-col, end-col):
     global world_grid
     global ship_position
 
+    if (
+        start_row < 0
+        or end_row >= world_grid
+        or start_col < 0
+        or end_col >= world_grid
+    ):
+        print("Please place ship inside boundary of the board.")
+
     checked = True
     for r in range(start-row, end-row):
         for c in range(start-col, end-col):
